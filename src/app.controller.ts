@@ -13,9 +13,12 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-
+  /**
+   * 
+   * @returns service의 string 값 반환
+   */
   @Get('/hello')
   sayHello(): string {
-    return 'Hello everyone';
+    return this.appService.getHi();
   }
 }
